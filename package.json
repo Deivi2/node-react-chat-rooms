@@ -8,14 +8,33 @@
     "start": "npm run build && node src/server/index.js",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon src/server/index.js",
-    "dev": "concurrently 'npm run server' 'npm run client'"
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "Sandeep Raveesh",
+  "author": "Deividas",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "date-fns": "^1.29.0",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.3.1",
+    "peerjs": "^0.3.17",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-cookie": "^3.0.4",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-css": "^2.4.0",
+    "semantic-ui-react": "^0.82.5",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

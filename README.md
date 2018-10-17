@@ -24,7 +24,7 @@ This is a boilerplate to build a full stack web application using React, Node.js
 
 ## Introduction
 
-[Create React App](https://github.com/facebook/create-react-app) is a quick way to get started with React development and it requires no build configuration. But it completely hides the build config which makes it difficult to extend. It also requires some additional work to integrate it with an existing Node.js/Express backend application.
+[Create React Login](https://github.com/facebook/create-react-app) is a quick way to get started with React development and it requires no build configuration. But it completely hides the build config which makes it difficult to extend. It also requires some additional work to integrate it with an existing Node.js/Express backend application.
 
 This is a simple full stack [React](https://reactjs.org/) application with a [Node.js](https://nodejs.org/en/) and [Express](https://expressjs.com/) backend. Client side code is written in React and the backend API is written using Express. This application is configured with [Airbnb's ESLint rules](https://github.com/airbnb/javascript) and formatted through [prettier](https://prettier.io/).
 
@@ -115,7 +115,7 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const outputDirectory = "dist";
 
 module.exports = {
-  entry: "./src/client/index.js",
+  entry: "./src/client/ChatFeed.js",
   output: {
     path: path.join(__dirname, outputDirectory),
     filename: "bundle.js"
@@ -198,7 +198,7 @@ Here, we tell nodemon to watch the files in the directory src/server where out s
 
 Express is a web application framework for Node.js. It is used to build our backend API's.
 
-src/server/index.js is the entry point to the server application. Below is the src/server/index.js file
+src/server/ChatFeed.js is the entry point to the server application. Below is the src/server/ChatFeed.js file
 
 ```javascript
 const express = require("express");
@@ -221,7 +221,7 @@ This starts a server and listens on port 8080 for connections. The app responds 
 
 ```javascript
 "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
-"server": "nodemon src/server/index.js",
+"server": "nodemon src/server/ChatFeed.js",
 "dev": "concurrently \"npm run server\" \"npm run client\""
 ```
 
